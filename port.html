@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revathi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            font-size: 18px;
+            background: #191919 url("D:\\CodeSoft\\bg.png") repeat; /* Dark background with texture */
+            color: #000; /* Set font color to black */
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+        }
+
+        nav {
+            background-color: transparent;
+            padding: 15px 0;
+            transition: background-color 0.5s ease;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000; /* Set font color to black */
+            font-weight: bold;
+            transition: color 0.3s ease;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+        }
+
+        nav a:hover {
+            color: #ff6666; /* Pink on hover */
+        }
+
+        header {
+            background-color: #22222200; /* Dark background color */
+            color: #000; /* Set font color to black */
+            text-align: left; /* Align text to left */
+            padding: 100px 0;
+            opacity: 0.9; /* Adjusted transparency */
+            box-shadow: 0 5px 15px rgb(92, 91, 91);
+            animation: fadeIn 1s forwards, slideInHeader 1s ease-out, fadeInUp 1s forwards;
+            position: relative;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 30%;
+            height: 20%;
+            background: transparent;
+            z-index: 1;
+        }
+
+        @keyframes slideInHeader {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            margin-bottom: 40px;
+            color: #000; /* Set font color to black */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            opacity: 0.9; /* Adjusted transparency */
+            animation: fadeInUp 1s forwards, slideUp 1s forwards;
+            transform: translateY(20px);
+            animation: slideUp 1s forwards;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #skills li {
+            margin: 10px;
+            text-align: center;
+            border: 2px solid #000; /* Black border */
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+        }
+
+        #skills li:hover {
+            transform: scale(1.1); /* Hover effect */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Lighter shadow on hover */
+        }
+
+        #projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+        }
+
+        .project {
+            flex: 0 0 calc(45% - 20px); /* Smaller project size */
+            margin: 10px;
+            text-align: center;
+            border: 2px solid #000; /* Black border */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05); /* Hover effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Lighter shadow on hover */
+        }
+
+        #projects img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #resume,
+        #contact {
+            text-align: center;
+            font-size: 18px;
+            color: #000; /* Black text */
+        }
+
+        #contact ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #contact li {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #contact li i {
+            margin-right: 5px;
+        }
+
+        /* Additional Animations */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <img src="D:\\CodeSoft\\images.jpg" alt="About Me Background" style="float: left; margin-right: 20px;">
+            <h1 style="font-size: 2.5rem; font-weight: 600;">Hey, I'm Revathi</h1>
+            <p style="font-size: 1.2rem; font-weight: 400; margin-top: 10px;">A passionate web developer with a love for creating beautiful and functional websites.</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a creative and detail-oriented web developer with expertise in HTML, CSS, JavaScript, and various web development frameworks such as React.js and Node.js. My goal is to create engaging and user-friendly websites that leave a lasting impression.</p>
+            <p>When I'm not coding, you can find me exploring the latest web design trends, experimenting with new technologies, or enjoying a good cup of coffee while brainstorming new ideas for my next project.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fab fa-html5"></i> HTML5</li>
+                <li><i class="fab fa-css3"></i> CSS3</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+                <li><i class="fab fa-react"></i> React.js</li>
+                <li><i class="fab fa-node"></i> Node.js</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Smart Light</h3>
+                <img src="D:\\CodeSoft\\lightnew.jpg" alt="Project 1">
+                <p>This project describes the smart light to save electricity in households.</p>
+            </div>
+            <div class="project">
+                <h3>Library Management</h3>
+                <img src="D:\\CodeSoft\\img libr.png" alt="Project 2">
+                <p>This project describes Library Management in the Java Platform.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <!-- Add your resume content or a link to your resume file -->
+            <p>Download my resume: <a href="D:\\CodeSoft\\Offer.pdf" download>Resume</a></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me. Here are my contact details:</p>
+            <ul>
+                <li><i class="far fa-envelope"></i> Email: <a href="mailto:revathi@gmail.com">revathi@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> Phone: <a href="tel:+123456789">+123456789</a></li>
+                <li><i class="fab fa-instagram"></i> Instagram: <a href="https://www.linkedin.com/in/RevathiS" target="_blank">RevathiS</a></li>
+                <!-- Add more contact details as needed -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Add other sections as needed -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Revathi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
